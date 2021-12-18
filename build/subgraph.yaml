@@ -1,6 +1,6 @@
 specVersion: 0.0.2
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum
     name: Token
@@ -17,10 +17,10 @@ dataSources:
         - Upgraded
       abis:
         - name: Token
-          file: ./abis/Token.json
+          file: Token/abis/Token.json
       eventHandlers:
         - event: AdminChanged(address,address)
           handler: handleAdminChanged
         - event: Upgraded(indexed address)
           handler: handleUpgraded
-      file: ./src/mapping.ts
+      file: Token/Token.wasm
